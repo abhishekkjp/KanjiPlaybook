@@ -4,6 +4,9 @@ import { JLPTLevel } from '../types/kanji';
 
 const VALID_LEVELS: JLPTLevel[] = ['N1', 'N2', 'N3', 'N4', 'N5'];
 
+
+
+
 // GET /api/kanji?level=N3&page=1&limit=50
 export const getKanji = async (req: Request, res: Response): Promise<void> => {
   try {
