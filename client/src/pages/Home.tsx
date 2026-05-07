@@ -17,12 +17,23 @@ const Home = () => {
           <h1 className="text-2xl font-bold text-gray-800 text-center tracking-tight">
             漢字 Playbook
           </h1>
-          <LevelTabs activeLevel={activeLevel} onLevelChange={setActiveLevel} />
+         
         </div>
       </header>
 
       {/* main */}
-      <main className="max-w-6xl mx-auto px-4 py-8">
+
+
+
+      <main className="max-w-6xl mx-auto px-4 py-8 border-2 border-amber-400">
+
+        {/* Change level */}
+      <LevelTabs activeLevel={activeLevel} onLevelChange={setActiveLevel} />
+   
+
+
+
+
         {/* stats */}
         <div className="flex justify-between items-center mb-6">
           <p className="text-sm text-gray-500">
