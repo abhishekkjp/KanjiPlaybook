@@ -14,9 +14,9 @@ app.use(cors());
 app.use(express.json());
 
 // routes will be added here as we build them
-app.get('/', (req:Request, res:Response) => {
-    res.json({ message: 'Server is up' });
-  });
+// app.get('/', (req:Request, res:Response) => {
+//     res.json({ message: 'Server is up' });
+//   });
  app.use('/api/kanji', kanjiRoutes);
 
 const PORT = process.env.PORT || 5000;
