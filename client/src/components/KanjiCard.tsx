@@ -40,10 +40,18 @@ const KanjiCard = ({ kanji }: Props) => {
             <div className="flex gap-1 flex-wrap">
               {/* <span className="text-gray-400 font-medium">訓:</span> */}
               <span className="text-gray-600">{kanji.kunyomi.join('、')}</span>
-            </div>
+            </div>  
           )}
         </div>
       </div>
+       
+     {/* Examples */}
+     <p className="text-center text-white text-sm  font-medium bg-green-700 py-1 ">
+             Examples
+     </p>
+
+
+
 
       {/* stroke count */}
       <div className="text-xs text-gray-400 text-right">
