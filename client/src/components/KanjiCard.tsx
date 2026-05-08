@@ -21,24 +21,25 @@ const KanjiCard = ({ kanji }: Props) => {
 
       {/* readings */}
       <div className="text-xs space-y-1 grid grid-cols-2  place-items-center">
-           <div>
-           {kanji.onyomi.length > 0 && (
-          <div className="flex gap-1 flex-wrap">
-            <span className="text-gray-400 font-medium">音:</span>
-            <span className="text-gray-600">{kanji.onyomi.join('、')}</span>
-          </div>
-        )}
-           </div>
+        <div className=' w-full flex flex-col items-center justify-center'>
+          <span className='px-5 py-2  text-white bg-gray-500'>Onyomi</span>
+          {kanji.onyomi.length > 0 && (
+            <div className="flex gap-1 flex-wrap">
+              <span className="text-gray-400 font-medium">音:</span>
+              <span className="text-gray-600">{kanji.onyomi.join('、')}</span>
+            </div>
+          )}
+        </div>
 
 
-           <div>
-           {kanji.kunyomi.length > 0 && (
-          <div className="flex gap-1 flex-wrap">
-            <span className="text-gray-400 font-medium">訓:</span>
-            <span className="text-gray-600">{kanji.kunyomi.join('、')}</span>
-          </div>
-        )}
-           </div>
+        <div>
+          {kanji.kunyomi.length > 0 && (
+            <div className="flex gap-1 flex-wrap">
+              <span className="text-gray-400 font-medium">訓:</span>
+              <span className="text-gray-600">{kanji.kunyomi.join('、')}</span>
+            </div>
+          )}
+        </div>
       </div>
 
       {/* stroke count */}
