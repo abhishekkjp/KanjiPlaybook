@@ -38,7 +38,7 @@ const KanjiCard = ({ kanji }: Props) => {
         <span className='px-5 py-2  text-white bg-gray-500 mb-4'>Kunyomi</span>
           {kanji.kunyomi.length > 0 && (
             <div className="flex gap-1 flex-wrap">
-              <span className="text-gray-400 font-medium">訓:</span>
+              {/* <span className="text-gray-400 font-medium">訓:</span> */}
               <span className="text-gray-600">{kanji.kunyomi.join('、')}</span>
             </div>
           )}
