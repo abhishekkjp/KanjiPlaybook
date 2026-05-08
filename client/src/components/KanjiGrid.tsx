@@ -28,9 +28,11 @@ const KanjiGrid = ({ kanji, loading, error }: Props) => {
   }
 
   return (
-    <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-4">
+    <div className="grid grid-cols-1 lg:grid-cols-2 gap-0 auto-rows-fr border border-gray-300">
       {kanji.map((k) => (
-        <KanjiCard key={k._id} kanji={k} />
+           <div className='border border-gray-300 p-5'>
+             <KanjiCard key={k._id} kanji={k} />
+           </div>
       ))}
     </div>
   );

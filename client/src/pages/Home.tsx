@@ -35,7 +35,7 @@ const Home = () => {
 
 
         {/* stats */}
-        <div className="flex justify-between items-center mb-6">
+        <div className="flex justify-between items-center mb-6 px-5">
           <p className="text-sm text-gray-500">
             {total} kanji in {activeLevel}
           </p>
