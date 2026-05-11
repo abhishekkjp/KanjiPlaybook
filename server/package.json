@@ -8,7 +8,8 @@
     "build": "tsc",
     "start": "node dist/server.js",
     "seed": "ts-node data/seed.ts",
-    "debug": "ts-node data/debug.ts"
+    "debug": "ts-node data/debug.ts",
+    "enrich": "ts-node data/enrichWords.ts"
   },
   "keywords": [],
   "author": "",
