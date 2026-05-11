@@ -49,6 +49,49 @@ const KanjiCard = ({ kanji }: Props) => {
      <p className="text-center text-white text-sm  font-medium bg-green-700 py-1 ">
              Examples
      </p>
+     {/* divider */}
+<div className="border-t border-gray-100" />
+
+{/* examples — two column layout */}
+<div className="grid grid-cols-2 gap-2 text-xs">
+  
+  {/* on examples */}
+  <div className="flex flex-col gap-1">
+    <span className="text-gray-400 font-semibold uppercase tracking-wide text-[10px]">
+      音読み例
+    </span>
+    {kanji.on_examples && kanji.on_examples.length > 0 ? (
+      kanji.on_examples.map((w, i) => (
+        <div key={i} className="flex flex-col">
+          <span className="text-gray-700 font-medium">{w.word}</span>
+          <span className="text-gray-400">{w.reading}</span>
+          <span className="text-indigo-400 text-[10px]">{w.meaning}</span>
+        </div>
+      ))
+    ) : (
+      <span className="text-gray-300 italic">—</span>
+    )}
+  </div>
+
+  {/* kun examples */}
+  <div className="flex flex-col gap-1">
+    <span className="text-gray-400 font-semibold uppercase tracking-wide text-[10px]">
+      訓読み例
+    </span>
+    {kanji.kun_examples && kanji.kun_examples.length > 0 ? (
+      kanji.kun_examples.map((w, i) => (
+        <div key={i} className="flex flex-col">
+          <span className="text-gray-700 font-medium">{w.word}</span>
+          <span className="text-gray-400">{w.reading}</span>
+          <span className="text-indigo-400 text-[10px]">{w.meaning}</span>
+        </div>
+      ))
+    ) : (
+      <span className="text-gray-300 italic">—</span>
+    )}
+  </div>
+
+</div>
 
 
 

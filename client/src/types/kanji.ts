@@ -5,7 +5,6 @@ export interface Word {
   reading: string;
   meaning: string;
 }
-
 export interface Kanji {
   _id: string;
   character: string;
@@ -15,7 +14,8 @@ export interface Kanji {
   meaning: string;
   strokeCount: number;
   imageUrl: string;
-  words: Word[];
+  on_examples: Word[];
+  kun_examples: Word[];
 }
 
 export interface KanjiResponse {

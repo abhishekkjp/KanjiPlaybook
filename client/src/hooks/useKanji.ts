@@ -19,6 +19,10 @@ const useKanji = (level: JLPTLevel): UseKanjiResult => {
   const [total, setTotal] = useState<number>(0);
   const [totalPages, setTotalPages] = useState<number>(1);
   const [page, setPage] = useState<number>(1);
+   
+  console.log(kanji) ; 
+
+
 
   useEffect(() => {
     setPage(1);
