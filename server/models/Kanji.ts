@@ -22,16 +22,13 @@ const KanjiSchema = new Schema<IKanjiDocument>(
     meaning: { type: String, required: true },
     strokeCount: { type: Number, required: true },
     imageUrl: { type: String, default: '' },
-    words: { type: [WordSchema], default: [] },
+    on_examples: { type: [WordSchema], default: [] },
+    kun_examples: { type: [WordSchema], default: [] },
   },
-  {
-    timestamps: true,
-  }
+  { timestamps: true }
 );
 
-// index for fast level queries
 KanjiSchema.index({ level: 1 });
 
 const Kanji = model<IKanjiDocument>('Kanji', KanjiSchema);
-
 export default Kanji;

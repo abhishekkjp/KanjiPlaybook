@@ -20,7 +20,7 @@ const useKanji = (level: JLPTLevel): UseKanjiResult => {
   const [totalPages, setTotalPages] = useState<number>(1);
   const [page, setPage] = useState<number>(1);
    
-  console.log(kanji) ; 
+  //console.log(kanji) ; 
 
 
 
