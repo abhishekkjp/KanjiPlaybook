@@ -39,7 +39,7 @@ const useKanji = (level: JLPTLevel): UseKanjiResult => {
         setKanji(data.kanji);
         setTotal(data.total);
         setTotalPages(data.totalPages);
-      } catch (err) {
+      } catch (err)  {
         setError('Failed to fetch kanji');
       } finally {
         setLoading(false);
